@@ -49,7 +49,6 @@ fun CityListScreen(
     var editedProvinceName by remember { mutableStateOf("") }
     var showDeleteDialog by remember { mutableStateOf(false) }
 
-    // Using a Box allows us to place the red Delete button floating at the bottom right
     Box(modifier = modifier.fillMaxSize()) {
         Column(modifier = Modifier.fillMaxSize()) {
             Row(
@@ -208,7 +207,6 @@ fun CityListScreen(
             }
         }
 
-        // The Red Delete Button positioned at the bottom right of the screen
         if (selectedCity != null) {
             Button(
                 onClick = { showDeleteDialog = true },
